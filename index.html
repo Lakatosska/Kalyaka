@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+
+    <title>Проект Kalyaka</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Елена Никифорова" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="page__wrapper">
+        <header class="header">
+          <img src="./images/logo.svg" class="logo" />
+          <h1 class="header__title">
+            Не&nbsp;умеете&nbsp;рисовать? Не&nbsp;беда!
+          </h1>
+          <p class="header__subtitle">
+            С помощью нашего приложения вы можете чиркануть каляку и получить
+            шедевр.
+          </p>
+          <img class="header__image" src="./images/kalyaka_header.png" />
+          <button class="button button_place_header">Подробнее</button>
+        </header>
+
+        <main class="content">
+          <section class="advantages">
+            <ul class="cards page__cards page__cards_upper">
+              <li class="card">
+                <p class="card__feature">AI</p>
+                <h3 class="card__title">Умный интелект приложения</h3>
+                <p class="card__description">
+                  С помощью AI приложение анализирует картины мастеров и
+                  современных практиков рисования, и достраивает картину за вас.
+                </p>
+              </li>
+              <li class="card">
+                <p class="card__feature">Ч/Б и Цвет</p>
+                <h3 class="card__title">Рисуйте в любом стиле</h3>
+                <p class="card__description">
+                  Будь то карандашная каляка-маляка или цветное произведение,
+                  приложение поможет в любой ситуации.
+                </p>
+              </li>
+            </ul>
+            <h2 class="title page__title">
+              Чик-чирик и ваша каляка превращается в изумительное произведение
+              искусства.
+            </h2>
+            <div class="mockups">
+              <img class="mockups__image" src="images/kalyaka_low.png" />
+              <img class="mockups__image" src="images/kalyaka_medium.png" />
+              <img class="mockups__image" src="images/kalyaka_high.png" />
+            </div>
+            <ul class="cards page__cards">
+              <li class="card">
+                <p class="card__feature">Быстро</p>
+                <h3 class="card__title">Проблем с рисованием — нет</h3>
+                <p class="card__description">
+                  Рисуйте в приложении доступными кистями: карандаш, маркер,
+                  линер, масляная кисть и многие другие...
+                </p>
+              </li>
+              <li class="card">
+                <p class="card__feature">Просто</p>
+                <h3 class="card__title">
+                  Нарисовали, преобразовали, сохранили
+                </h3>
+                <p class="card__description">
+                  Раз, два, три, больше нечего тут рассказать.
+                </p>
+              </li>
+            </ul>
+            <h2 class="title page__title">
+              Качайте приложение и улучшайте свои художества, а потом
+              хвастайтесь ими!
+            </h2>
+          </section>
+
+          <section class="feedback">
+            <div class="feedback__cell">
+              <h3 class="feedback__title">Хотите нам что-то посоветовать?</h3>
+              <p class="feedback__description">
+                Оставьте заявку и мы свяжемся с вами.
+              </p>
+            </div>
+
+            <form class="form">
+              <input
+                type="text"
+                name="user_name"
+                class="form__input form__input_type_name"
+                placeholder="Ваше Имя"
+                required
+              />
+
+              <input
+                type="email"
+                name="user_email"
+                class="form__input form__input_type_email"
+                placeholder="Контактный Email"
+                required
+              />
+
+              <textarea
+                type="text"
+                name="user_message"
+                class="form__input form__input_type_message"
+                placeholder="Сообщение"
+                required
+              ></textarea>
+
+              <button type="submit" class="button button_place_form">
+                Оставить заявку
+              </button>
+            </form>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <h3 class="footer__title">Хотите скачать приложение?</h3>
+          <p class="footer__subtitle">Качайте в ЭпСтор и ГуглПлэй.</p>
+          <button class="button button_place_footer">Уже скоро!</button>
+          <img class="footer__image" src="images/kalyaka_footer.png" />
+        </footer>
+      </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

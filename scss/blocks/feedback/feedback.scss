@@ -1,0 +1,35 @@
+.feedback{
+  max-width: 1100px;
+  min-height: 628px;
+  margin: 0 auto;
+  background-color: var(--color-primary-grey);
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback__title {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 60px 0 20px;
+  padding: 0;
+  max-width: 500px;
+  text-align: center;
+}
+
+.feedback__description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0 0 100px 0;
+  padding: 0;
+}

@@ -1,0 +1,51 @@
+.form {
+  width: 980px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 470px 470px;
+      grid-template-columns: 470px 470px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  margin: 0 auto;
+}
+
+.form__input {
+  width: 470px;
+  min-height: 54px;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form__input_type_message {
+  width: 980px;
+  min-height: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+::-webkit-input-placeholder {
+  color: var(--color-text-grey-secondary);
+}
+
+::-moz-placeholder {
+  color: var(--color-text-grey-secondary);
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: var(--color-text-grey-secondary);
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: var(--color-text-grey-secondary);
+}
+/*# sourceMappingURL=form.css.map */

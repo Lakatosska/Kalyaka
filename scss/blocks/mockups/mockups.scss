@@ -1,0 +1,13 @@
+.mockups {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.mockups__image {
+  margin-right: 25px;
+}
+
+.mockups__image:last-of-type {
+  margin-right: 0;
+}
