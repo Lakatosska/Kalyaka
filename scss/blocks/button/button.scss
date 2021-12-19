@@ -59,5 +59,13 @@
   grid-row: 3;
   grid-column: 2;
   justify-self: right;
+
+  @media screen and (max-width: 1100px) {
+    width: 470px;
+  }
+
+  @media screen and (max-width: 745px) {
+    width: 260px;
+  }
 }
 

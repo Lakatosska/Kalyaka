@@ -2,8 +2,7 @@
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(349px, 540px));
-  gap: 20px;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }

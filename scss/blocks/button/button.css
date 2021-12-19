@@ -82,4 +82,16 @@
   -ms-grid-column-align: right;
       justify-self: right;
 }
+
+@media screen and (max-width: 1100px) {
+  .button_place_form {
+    width: 470px;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .button_place_form {
+    width: 260px;
+  }
+}
 /*# sourceMappingURL=button.css.map */
