@@ -37,6 +37,12 @@
   }
 }
 
+@media screen and (max-width: 745px) {
+  .button_place_header {
+    margin-top: 50px;
+  }
+}
+
 .button_place_footer {
   width: 470px;
 }

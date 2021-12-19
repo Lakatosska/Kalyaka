@@ -1,12 +1,14 @@
 .cards {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(349px, 540px))[2];
+      grid-template-columns: repeat(2, minmax(349px, 540px));
+  gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0;
-  padding: 0;
 }
 /*# sourceMappingURL=cards.css.map */

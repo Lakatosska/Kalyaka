@@ -2,15 +2,10 @@
   max-width: 540px;
   min-height: 308px;
   padding: 40px;
-  margin-right: 20px;
   background-color: var(--color-primary-grey);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
-}
-
-.card:last-of-type {
-  margin-right: 0;
 }
 
 .card__feature {

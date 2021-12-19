@@ -29,9 +29,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding: 20px;
   }
 }
 
@@ -55,6 +53,15 @@
   }
 }
 
+@media screen and (max-width: 745px) {
+  .header__title {
+    font-size: 24px;
+    line-height: 29.05px;
+    margin: 50px 0 14px;
+    max-width: 260px;
+  }
+}
+
 .header__subtitle {
   color: var(--color-text-grey);
   font-size: 18px;
@@ -70,6 +77,14 @@
     font-size: 15px;
     line-height: 20px;
     max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .header__subtitle {
+    font-size: 12px;
+    line-height: 14.52px;
+    max-width: 260px;
   }
 }
 
@@ -97,6 +112,7 @@
 @media screen and (max-width: 745px) {
   .header__image {
     position: static;
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=header.css.map */
