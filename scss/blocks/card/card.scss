@@ -26,6 +26,10 @@
   line-height: 20px;
   font-weight: 500;
   color: $text-secondary;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 15px;
+  }
 }
 
 .card__title {
@@ -35,6 +39,12 @@
   line-height: 38px;
   font-weight: 600;
   color: $text-primary;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 26px;
+    line-height: 31.47px;
+    min-height: 102px;
+  }
 }
 
 .card__description {
@@ -44,4 +54,15 @@
   line-height: 24px;
   font-weight: 400;
   color: $text-secondary;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.card_hidden {
+  @media screen and (max-width: 745px) {
+    display: none;
+  }
 }
