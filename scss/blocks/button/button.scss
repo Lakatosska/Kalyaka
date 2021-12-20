@@ -13,13 +13,14 @@
   min-height: 54px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  font-family: $font-family;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 14px;
     min-height: 48px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     font-size: 12px;
     min-height: 44px;
   }
@@ -33,11 +34,11 @@
   width: 240px;
   margin-top: 108px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     margin-top: 250px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     margin-top: 50px;
   }
 
@@ -50,12 +51,12 @@
   width: 470px;
   margin-top: 174px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     width: 240px;
     margin-top: 130px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     margin-top: 95px;
   }
 }
@@ -74,11 +75,11 @@
     opacity: 0.85;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     width: 470px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     width: 260px;
   }
 }

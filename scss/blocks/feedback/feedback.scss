@@ -6,11 +6,11 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     min-height: 611px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     min-height: 614px;
   }
 }
@@ -32,7 +32,7 @@
   max-width: 500px;
   text-align: center;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 26px;
     line-height: 31.47px;
     margin: 30px 0 24px;
@@ -44,15 +44,16 @@
   line-height: 24px;
   font-weight: 400;
   color: $text-secondary;
-  margin: 0 0 100px 0;
+  @include reset;
+  margin-bottom: 100px;
   padding: 0 20px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 15px;
     line-height: 20px;
   }
 
-  @media screen and (max-width: 745px) {
-    margin: 0 0 80px 0;
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 80px;
   }
 }
