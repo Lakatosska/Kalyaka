@@ -38,13 +38,12 @@
     margin: 50px 0 20px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: 425px) {
     font-size: 24px;
     line-height: 29.05px;
     margin: 50px 0 14px;
     max-width: 260px;
   }
-
 }
 
 .header__subtitle {
@@ -62,7 +61,7 @@
     max-width: 360px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: 425px) {
     font-size: 12px;
     line-height: 14.52px;
     max-width: 260px;

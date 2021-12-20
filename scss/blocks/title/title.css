@@ -6,4 +6,20 @@
   max-width: 1103px;
   padding: 0;
 }
+
+@media screen and (max-width: 1130px) {
+  .title {
+    font-size: 33px;
+    line-height: 37px;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .title {
+    font-size: 26px;
+    line-height: 31.47px;
+    padding: 0 20px;
+  }
+}
 /*# sourceMappingURL=title.css.map */

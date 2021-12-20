@@ -5,6 +5,14 @@
   background-color: var(--color-primary-grey);
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1100px) {
+    min-height: 611px;
+  }
+
+  @media screen and (max-width: 745px) {
+    min-height: 614px;
+  }
 }
 
 .feedback__cell {
@@ -20,9 +28,15 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 60px 0 20px;
-  padding: 0;
+  padding: 0 20px;
   max-width: 500px;
   text-align: center;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 26px;
+    line-height: 31.47px;
+    margin: 30px 0 24px;
+  }
 }
 
 .feedback__description {
@@ -31,5 +45,14 @@
   font-weight: 400;
   color: var(--color-text-secondary);
   margin: 0 0 100px 0;
-  padding: 0;
+  padding: 0 20px;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  @media screen and (max-width: 745px) {
+    margin: 0 0 80px 0;
+  }
 }
