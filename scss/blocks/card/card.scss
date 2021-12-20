@@ -2,48 +2,46 @@
   width: 540px;
   min-height: 308px;
   padding: 40px;
-  background-color: var(--color-primary-grey);
+  background-color: $primary-grey;
   box-sizing: border-box;
   border-radius: 20px;
   margin-right: 20px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     width: 349px;
+    min-height: 284px;
     margin-right: 10px;
     padding: 30px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     width: 300px;
     padding: 20px;
   }
 }
 
-
-
 .card__feature {
-  margin: 0;
-  padding: 0;
+  @include reset;
   font-size: 18px;
   line-height: 20px;
   font-weight: 500;
-  color: var(--color-text-secondary);
+  color: $text-secondary;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 15px;
   }
 }
 
 .card__title {
-  margin: 20px 0 0;
-  padding: 0;
+  @include reset;
+  margin-top: 20px;
   font-size: 32px;
   line-height: 38px;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: $text-primary;
   min-height: 116px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 26px;
     line-height: 31.47px;
     min-height: 102px;
@@ -51,21 +49,20 @@
 }
 
 .card__description {
-  margin: 0;
-  padding: 0;
+  @include reset;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--color-text-secondary);
+  color: $text-secondary;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 15px;
     line-height: 20px;
   }
 }
 
 .card_hidden {
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     display: none;
   }
 }

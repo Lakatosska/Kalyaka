@@ -4,8 +4,9 @@
   grid-template-columns: 470px 470px;
   column-gap: 40px;
   margin: 0 auto;
+  font-family: $font-family;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +26,7 @@
   margin-bottom: 20px;
   box-sizing: border-box;
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     width: 260px;
     font-size: 12px;
   }
@@ -37,16 +38,16 @@
   box-sizing: border-box;
   margin-bottom: 0;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     width: 470px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     width: 260px;
   }
 }
 
-::-webkit-input-placeholder {color:var(--color-text-grey-secondary)}
-::-moz-placeholder          {color:var(--color-text-grey-secondary)}/* Firefox 19+ */
-:-moz-placeholder           {color:var(--color-text-grey-secondary)}/* Firefox 18- */
-:-ms-input-placeholder      {color:var(--color-text-grey-secondary)}
+::-webkit-input-placeholder {color: $text-grey-secondary}
+::-moz-placeholder          {color: $text-grey-secondary}/* Firefox 19+ */
+:-moz-placeholder           {color: $text-grey-secondary}/* Firefox 18- */
+:-ms-input-placeholder      {color: $text-grey-secondary}

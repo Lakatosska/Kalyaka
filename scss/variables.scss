@@ -1,12 +1,20 @@
-:root {
-  --color-primary-light: #fff;
-  --color-primary-dark: #222;
-  --color-primary-grey: #F8F8F8;
-  --color-text-primary: #111;
-  --color-text-secondary: rgba(17, 17, 17, .6);
-  --color-text-grey-secondary: rgba(17, 17, 17, .3);
-  --color-text-grey: rgba(255, 255, 255, .7);
-  --default-font: "Inter", "Arial", sans-serif;
-}
+// fonts
+$font-family: "Inter", Arial, sans-serif;
+
+// colors
+$primary-light: #fff;
+$primary-dark: #222;
+$primary-grey: #F8F8F8;
+
+$text-primary: #111;
+$text-secondary: rgba(17, 17, 17, .6);
+$text-grey: rgba(255, 255, 255, .7);
+$text-grey-secondary: rgba(17, 17, 17, .3);
+
+// screen resolution
+$tablet: 1100px;
+$mobile: 745px;
+$mobile-small: 425px;
+
 
 

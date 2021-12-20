@@ -2,9 +2,9 @@
   font-size: 60px;
   line-height: 68px;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: $text-primary;
   max-width: 1103px;
-  padding: 0;
+  @include reset;
 
   @media screen and (max-width: 1130px) {
     font-size: 33px;
@@ -12,7 +12,7 @@
     padding: 0 50px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     font-size: 26px;
     line-height: 31.47px;
     padding: 0 20px;

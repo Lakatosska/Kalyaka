@@ -4,3 +4,9 @@
   font-weight: $fw;
 }
 
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+
