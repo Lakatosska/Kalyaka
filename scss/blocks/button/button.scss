@@ -11,6 +11,8 @@
   box-sizing: border-box;
   border: none;
   min-height: 54px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 
   @media screen and (max-width: 1100px) {
     font-size: 14px;
@@ -23,6 +25,10 @@
   }
 }
 
+.button::hover {
+  opacity: .93;
+}
+
 .button_place_header {
   width: 240px;
   margin-top: 108px;
@@ -33,6 +39,10 @@
 
   @media screen and (max-width: 745px) {
     margin-top: 50px;
+  }
+
+  &:hover {
+    opacity: 0.93;
   }
 }
 
@@ -60,6 +70,10 @@
   grid-column: 2;
   justify-self: right;
 
+  &:hover {
+    opacity: 0.85;
+  }
+
   @media screen and (max-width: 1100px) {
     width: 470px;
   }
@@ -68,4 +82,5 @@
     width: 260px;
   }
 }
+
 
