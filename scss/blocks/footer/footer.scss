@@ -1,5 +1,5 @@
 .footer{
-  background-color: var(--color-primary-dark);
+  background-color: $primary-dark;
   max-width: 1420px;
   min-height: 470px;
   padding: 60px 0 0 160px;
@@ -25,8 +25,8 @@
   font-size: 32px;
   line-height: 38px;
   font-weight: 600;
-  color: var(--color-primary-light);
-  margin: 0;
+  color: $primary-light;
+  margin: 0 0 20px;
   padding: 0;
   max-width: 460px;
 
@@ -39,7 +39,7 @@
 }
 
 .footer__subtitle {
-  color: var(--color-text-grey);
+  color: $text-grey;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;

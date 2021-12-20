@@ -1,6 +1,6 @@
 .button {
-  background-color: var(--color-primary-light);
-  color: var(-color-primary-dark);
+  background-color: $primary-light;
+  color: $primary-dark;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -62,8 +62,8 @@
 
 .button_place_form {
   width: 194px;
-  background-color: var(--color-primary-dark);
-  color: var(--color-primary-light);
+  background-color: $primary-dark;
+  color: $primary-light;
   margin-top: 30px;
   z-index: 2;
   grid-row: 3;
