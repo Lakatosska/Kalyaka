@@ -12,6 +12,7 @@
  * Media queries
  * Form
  * Javascript
+ * Preprocessor SASS/SCSS
 
 [Ссылка на макет в Figma](https:https://www.figma.com/file/G3UWFlQmNtNs67751YiDH2/Month-of-Landings?node-id=6%3A898//www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-%2B-mobile?node-id=28503%3A0)   
 [Ссылка на проект на GitHub Pages](https://lakatosska.github.io/kalyaka/) 
