@@ -62,6 +62,8 @@
 }
 
 .card_hidden {
+  display:block;
+
   @media screen and (max-width: $mobile) {
     display: none;
   }
