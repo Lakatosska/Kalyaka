@@ -1,6 +1,10 @@
 .radio-buttons {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+
+  @media screen and (max-width: $mobile) {
+    display: flex;
+  }
 }

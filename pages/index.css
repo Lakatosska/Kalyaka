@@ -261,9 +261,7 @@
 }
 
 .radio-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -271,6 +269,14 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 745px) {
+  .radio-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .form {
@@ -428,10 +434,9 @@
   line-height: 24px;
   font-weight: 400;
   color: rgba(17, 17, 17, 0.6);
-  margin: 0;
-  padding: 0;
-  margin-bottom: 100px;
+  margin-bottom: 0 auto 100px;
   padding: 0 20px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1100px) {
@@ -686,6 +691,9 @@
 .button_place_footer {
   width: 470px;
   margin-top: 174px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media screen and (max-width: 1100px) {
@@ -722,6 +730,7 @@
 @media screen and (max-width: 1100px) {
   .button_place_form {
     width: 470px;
+    margin-top: 50px;
   }
 }
 

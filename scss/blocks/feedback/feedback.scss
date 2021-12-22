@@ -44,9 +44,9 @@
   line-height: 24px;
   font-weight: 400;
   color: $text-secondary;
-  @include reset;
-  margin-bottom: 100px;
+  margin-bottom: 0 auto 100px;
   padding: 0 20px;
+  text-align: center;
 
   @media screen and (max-width: $tablet) {
     font-size: 15px;
