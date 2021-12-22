@@ -50,6 +50,7 @@
 .button_place_footer {
   width: 470px;
   margin-top: 174px;
+  align-self: center;
 
   @media screen and (max-width: $tablet) {
     width: 240px;
@@ -77,6 +78,7 @@
 
   @media screen and (max-width: $tablet) {
     width: 470px;
+    margin-top: 50px;
   }
 
   @media screen and (max-width: $mobile) {
