@@ -18,28 +18,48 @@ function formSubmitHandler (evt) {
 
 formElement.addEventListener('submit', formSubmitHandler)
 
-// toggling cards
+// swiper
 
-const cardsElement = document.querySelector('.cards')
-const cardElement = cardsElement.querySelector('.card')
-const radioButtonsElement = document.querySelector('.radio-buttons')
-const radioButtonElement = radioButtonsElement.querySelector('.radio-button')
 
-function clickCard(card) {
-  card.forEach((element) => {
-    element.classList.toggle('card_hidden')
-  });
-};
-
-radioButtonElement.forEach((item) => {
-  item.addEventListener('click', (evt) => {
-    const activeButton = document.querySelector('.radio-button_active')
-    activeButton.classList.remove('radio-button_active')
-    evt.target.classList.add('radio-button_active')
-    clickCard(cardElement)
-  });
+new Swiper(".slider-cards", {
+  spaceBetween: 20,
+  wrapperClass: "slider-cards__wrapper",
+  slideClass: "slider-card",
+  direction: "horizontal",
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      bulletClass: "slider-card__bullet",
+      bulletActiveClass: "slider-card__bullet_active",
+  },
 });
 
 
+/*
+const swiper = new Swiper(".slider", {
+  slidesPerView: 3,
+  spaceBetween: 80,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 80,
+    },
+    768: {
+      centeredSlides: false,
+      slidesPerView: 2,
+      spaceBetween: 28,
+    },
+    320: {
+      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 80,
+    },
+  },
+});
+*/
 
 

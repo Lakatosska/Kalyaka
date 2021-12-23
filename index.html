@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./pages/index.css" />
 
     <title>Проект Kalyaka</title>
@@ -69,6 +74,42 @@
                 name="card-second"
               ></button>
             </div>
+
+            <div class="swiper slider-cards">
+              <ul class="slider-cards__wrapper swiper-wrapper">
+                <li class="swiper-slide slider-card card">
+                  <p class="card__feature">AI</p>
+                  <h2 class="card__title">Умный интелект приложения</h2>
+                  <p class="card__description">
+                    С помощью AI приложение анализирует картины мастеров и
+                    современных практиков рисования, и достраивает картину за
+                    вас.
+                  </p>
+                </li>
+                <li class="swiper-slide slider-card">
+                  <p class="card__feature">Быстро</p>
+                  <h2 class="card__title">Проблем с рисованием — нет</h2>
+                  <p class="card__description">
+                    Рисуйте в приложении доступными кистями: карандаш, маркер,
+                    линер, масляная кисть и многие другие...
+                  </p>
+                </li>
+              </ul>
+              <div class="swiper-pagination slider-cards__pagination"></div>
+            </div>
+            <div class="radio-buttons">
+              <button
+                class="radio-button radio-button_active"
+                type="button"
+                name="card-first"
+              ></button>
+              <button
+                class="radio-button"
+                type="button"
+                name="card-second"
+              ></button>
+            </div>
+
             <h2 class="title page__title">
               Чик-чирик и ваша каляка превращается в&nbsp;изумительное
               произведение искусства.
@@ -203,6 +244,7 @@
       </div>
     </div>
 
+    <script src="./scripts/swiper-bundle.min.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
