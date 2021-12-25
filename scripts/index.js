@@ -31,14 +31,15 @@ function clickCard(card) {
   });
 };
 
-radioButtonElement.forEach((item) => {
+Array.from(radioButtonElement).forEach((item) => {
   item.addEventListener('click', (evt) => {
-    const activeButton = document.querySelector('.radio-button_active')
+    const activeButton = radioButtonsElement.querySelector('.radio-button_active')
     activeButton.classList.remove('radio-button_active')
     evt.target.classList.add('radio-button_active')
     clickCard(cardElement)
   });
 });
+
 
 
 
