@@ -26,6 +26,8 @@
 }
 .swiper-wrapper {
   position: relative;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   display: flex;
   transition-property: transform;
@@ -43,6 +45,8 @@
 }
 .swiper-slide {
   flex-shrink: 0;
+  width: 100%;
+  height: 100%;
   position: relative;
   transition-property: transform;
 }
@@ -86,6 +90,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     z-index: 10;
   }
@@ -157,7 +163,7 @@
       margin-inline-start: var(--swiper-centered-offset-before);
     }
     > .swiper-wrapper::before {
-      
+      height: 100%;
       width: var(--swiper-centered-offset-after);
     }
   }
@@ -166,7 +172,7 @@
       margin-block-start: var(--swiper-centered-offset-before);
     }
     > .swiper-wrapper::before {
-
+      width: 100%;
       height: var(--swiper-centered-offset-after);
     }
   }
@@ -178,21 +184,17 @@
 
 .swiper-pagination-bullet {
   display: inline-block;
-  width: 4px;
-  height: 4px;
-  background-color: #D9D9D9;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  @include reset;
-  margin-right: 4px;
-  box-sizing: border-box;
-  border: none;
-  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 0 0;
 
   &:last-child {
     margin: 0;
   }
 
   &-active {
-    background-color: #212121;
+    background: #fff;
   }
 }

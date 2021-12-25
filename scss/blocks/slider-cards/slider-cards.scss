@@ -1,7 +1,8 @@
-.slider__cards {
-  display: none;
+.slider-cards {
+  display: flex;
   justify-content: center;
   align-items: center;
+
 
   @media screen and (max-width: $mobile) {
     display: flex;
@@ -10,24 +11,42 @@
 }
 
 .slider-cards__wrapper {
+  margin-top: 30px;
   list-style: none;
-  display: flex;
+  display: none;
   flex-direction: row;
   @include reset;
+
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    width: 300px;
+  }
+}
+
+.slider-cards__pagination {
+  margin-top: 390px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $mobile) {
+    display: flex;
+  }
 }
 
 .slider-card {
   width: 300px;
   min-height: 284px;
-  padding: 20px;
   background-color: $primary-grey;
+  padding: 20px;
   box-sizing: border-box;
   border-radius: 20px;
 }
 
-.slider-cards__pagination {
+.slider-card_place_mockups {
+  width: 260px;
+  background-color: $primary-light;
 }
-
 
 .slider-card__bullet {
   width: 4px;
