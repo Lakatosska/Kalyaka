@@ -20,10 +20,9 @@ formElement.addEventListener('submit', formSubmitHandler)
 
 // toggling cards
 
-const cardsElement = document.querySelector('.cards')
-const cardElement = cardsElement.querySelector('.card')
-const radioButtonsElement = document.querySelector('.radio-buttons')
-const radioButtonElement = radioButtonsElement.querySelector('.radio-button')
+const advantagesElement = document.querySelector('.advantages')
+const cardElement = advantagesElement.querySelector('.card')
+const radioButtonElement = advantagesElement.querySelector('.radio-button')
 
 function clickCard(card) {
   card.forEach((element) => {
@@ -31,15 +30,14 @@ function clickCard(card) {
   });
 };
 
-radioButtonElement.forEach((item) => {
+Array.from(radioButtonElement).forEach((item) => {
   item.addEventListener('click', (evt) => {
-    const activeButton = document.querySelector('.radio-button_active')
+    const activeButton = radioButtonsElement.querySelector('.radio-button_active')
     activeButton.classList.remove('radio-button_active')
     evt.target.classList.add('radio-button_active')
     clickCard(cardElement)
   });
 });
-
 
 
 

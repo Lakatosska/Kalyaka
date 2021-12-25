@@ -62,7 +62,7 @@
 }
 
 .card_hidden {
-  display:block;
+  display: block;
 
   @media screen and (max-width: $mobile) {
     display: none;
