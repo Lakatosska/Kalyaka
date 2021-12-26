@@ -1,6 +1,5 @@
-@import url(../vendor/normalize.css);
-@import url(../vendor/fonts/fonts.css);
-
+@import url(c:\Users\Admin\dev\kalyaka\vendor\normalize.css);
+@import url(c:\Users\Admin\dev\kalyaka\vendor\fonts\fonts.css);
 .header {
   background-color: #222;
   max-width: 1420px;
@@ -466,16 +465,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  list-style: none;
 }
 
 .mockups__image {
-  margin-right: 25px;
   width: 100%;
 }
 
 @media screen and (max-width: 1130px) {
   .mockups__image {
-    margin-right: 15px;
     width: 226px;
     height: 461px;
   }
@@ -486,10 +484,6 @@
     width: 260px;
     height: 522px;
   }
-}
-
-.mockups__image:last-of-type {
-  margin-right: 0;
 }
 
 @media screen and (max-width: 745px) {
