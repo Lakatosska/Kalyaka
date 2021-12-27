@@ -17,26 +17,6 @@
   overflow: hidden;
 }
 
-.page__cards {
-  margin: 120px auto 0;
-
-  @media screen and (max-width: $tablet) {
-    margin: 70px auto 0;
-  }
-}
-
-.page__cards_place_upper {
-  margin-top: 60px;
-}
-
-.page__title {
-  margin: 120px auto;
-
-  @media screen and (max-width: $tablet) {
-    margin: 70px auto;
-  }
-}
-
 .page__feedback {
   margin-bottom: 120px;
 

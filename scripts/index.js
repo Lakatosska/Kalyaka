@@ -20,10 +20,17 @@ formElement.addEventListener('submit', formSubmitHandler)
 
 // toggling cards
 
-const cardsElement = document.querySelector('.cards')
-const cardElement = cardsElement.querySelector('.card')
-const radioButtonsElement = document.querySelector('.radio-buttons')
-const radioButtonElement = radioButtonsElement.querySelector('.radio-button')
+const cardsIntroElement = document.querySelector('.cards-intro')
+const cardIntroElement = cardsIntroElement.querySelectorAll('.card')
+const buttonIntroElement = cardsIntroElement.querySelectorAll('.radio-button')
+
+const kalyakaElement = document.querySelector('.kalyaka-action')
+const mockupElement = kalyakaElement.querySelectorAll('.mockups__image')
+const buttonKalyakaElement = kalyakaElement.querySelectorAll('.radio-button')
+
+const cardsNextElement = document.querySelector('.cards-next')
+const cardNextElement = cardsNextElement.querySelectorAll('.card')
+const buttonNextElement = cardsNextElement.querySelectorAll('.radio-button')
 
 function clickCard(card) {
   card.forEach((element) => {
@@ -31,12 +38,36 @@ function clickCard(card) {
   });
 };
 
-Array.from(radioButtonElement).forEach((item) => {
+Array.from(buttonIntroElement).forEach((item) => {
   item.addEventListener('click', (evt) => {
-    const activeButton = radioButtonsElement.querySelector('.radio-button_active')
+    const activeButton = cardsIntroElement.querySelector('.radio-button_active')
     activeButton.classList.remove('radio-button_active')
     evt.target.classList.add('radio-button_active')
-    clickCard(cardElement)
+    clickCard(cardIntroElement)
+  });
+});
+
+Array.from(buttonKalyakaElement).forEach((item, index) => {
+  item.addEventListener('click', (evt) => {
+    const activeButton = kalyakaElement.querySelector('.radio-button_active');
+    activeButton.classList.remove('radio-button_active');
+    evt.target.classList.add('radio-button_active');
+    mockupElement.forEach((element, i) => {
+      if (index === i) {
+        element.classList.remove('mockups__image_hidden');
+      } else {
+        element.classList.add('mockups__image_hidden');
+      }
+    });
+  });
+});
+
+Array.from(buttonNextElement).forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    const activeButton = cardsNextElement.querySelector('.radio-button_active')
+    activeButton.classList.remove('radio-button_active')
+    evt.target.classList.add('radio-button_active')
+    clickCard(cardNextElement)
   });
 });
 

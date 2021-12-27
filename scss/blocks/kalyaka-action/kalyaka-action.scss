@@ -1,0 +1,9 @@
+.kalyaka-action__title {
+  margin: 120px auto;
+
+  @media screen and (max-width: $tablet) {
+    margin: 70px auto;
+  }
+}
+
+
