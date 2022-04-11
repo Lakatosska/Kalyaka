@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--color-primary-dark);
+  background-color: $primary-dark;
   max-width: 1420px;
   min-height: 640px;
   padding: 30px 0 0 160px;
@@ -15,15 +15,14 @@
     min-height: 602px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     align-items: center;
-    padding: 0;
-
+    padding: 20px;
   }
 }
 
 .header__title {
-  color: var(--color-primary-light);
+  color: $primary-light;
   font-size: 60px;
   line-height: 69px;
   font-weight: 700;
@@ -32,16 +31,23 @@
   padding: 0;
   max-width: 650px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 33px;
     line-height: 37px;
     max-width: 360px;
     margin: 50px 0 20px;
   }
+
+  @media screen and (max-width: $mobile-small) {
+    font-size: 24px;
+    line-height: 29.05px;
+    margin: 50px 0 14px;
+    max-width: 260px;
+  }
 }
 
 .header__subtitle {
-  color: var(--color-text-grey);
+  color: $text-grey;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
@@ -49,13 +55,17 @@
   padding: 0;
   max-width: 450px;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: $tablet) {
     font-size: 15px;
     line-height: 20px;
     max-width: 360px;
   }
 
-
+  @media screen and (max-width: $mobile-small) {
+    font-size: 12px;
+    line-height: 14.52px;
+    max-width: 260px;
+  }
 }
 
 .header__image {
@@ -75,8 +85,9 @@
     right: 45px;
   }
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: $mobile) {
     position: static;
+    margin-top: 50px;
   }
 }
 

@@ -1,9 +1,17 @@
 .form {
-  width: 980px;
+  max-width: 980px;
   display: grid;
   grid-template-columns: 470px 470px;
   column-gap: 40px;
   margin: 0 auto;
+  font-family: $font-family;
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .form__input {
@@ -17,6 +25,12 @@
   font-weight: 400;
   margin-bottom: 20px;
   box-sizing: border-box;
+  cursor: pointer;
+
+  @media screen and (max-width: $mobile) {
+    width: 260px;
+    font-size: 12px;
+  }
 }
 
 .form__input_type_message {
@@ -24,9 +38,17 @@
   min-height: 130px;
   box-sizing: border-box;
   margin-bottom: 0;
+
+  @media screen and (max-width: $tablet) {
+    width: 470px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 260px;
+  }
 }
 
-::-webkit-input-placeholder {color:var(--color-text-grey-secondary)}
-::-moz-placeholder          {color:var(--color-text-grey-secondary)}/* Firefox 19+ */
-:-moz-placeholder           {color:var(--color-text-grey-secondary)}/* Firefox 18- */
-:-ms-input-placeholder      {color:var(--color-text-grey-secondary)}
+::-webkit-input-placeholder {color: $text-grey-secondary}
+::-moz-placeholder          {color: $text-grey-secondary}/* Firefox 19+ */
+:-moz-placeholder           {color: $text-grey-secondary}/* Firefox 18- */
+:-ms-input-placeholder      {color: $text-grey-secondary}

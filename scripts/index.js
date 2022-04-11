@@ -1,125 +1,76 @@
-<!-- Профиль. Открытие и закрытие модального окна, редактирование -->
+// form
 
-const profile = document.querySelector('.profile')
-const popupEdit = document.querySelector('.popup_profile-edit')
-const editButton =  profile.querySelector('.profile__edit-button')
-const closeEditButton =  popupEdit.querySelector('.popup__close-button')
+const formElement = document.querySelector('.form')
+const nameInput = formElement.querySelector('.form__input_type_name')
+const emailInput = formElement.querySelector('.form__input_type_email')
+const messageInput = formElement.querySelector('.form__input_type_message')
+const applicationButton = formElement.querySelector('.button_place_form')
 
-const openPopupEdit = () => popupEdit.classList.add('popup_opened')
-const closePopupEdit = () => popupEdit.classList.remove('popup_opened')
-
-
-// Находим форму в DOM
-const editFormElement = document.querySelector('.edit-form_profile')
-
-// Находим поля формы в DOM
-const nameInput = editFormElement.querySelector('.edit-form__input_name')
-const jobInput = editFormElement.querySelector('.edit-form__input_job')
-
-// Выберите элементы, куда должны быть вставлены значения полей
-const profileName = profile.querySelector('.profile__name')
-const profileJob = profile.querySelector('.profile__job')
-
-// Открытие модального окна, поля заполняются значениями, указанными в профиле
-editButton.addEventListener('click', () => {
-  openPopupEdit()
-  nameInput.value = profileName.textContent
-  jobInput.value = profileJob.textContent
+applicationButton.addEventListener('click', () => {
+  console.log(nameInput.value);
+  console.log(emailInput.value);
+  console.log(messageInput.value);
 })
 
-// Закрытие модального окна, введенные данные не сохраняются
-closeEditButton.addEventListener('click', () => closePopupEdit())
-
-// Обработчик «отправки» формы, введенные данные сохраняются, модальное окно закрывается
 function formSubmitHandler (evt) {
   evt.preventDefault()
-
-  // Вставьте новые значения с помощью textContent
-  profileName.textContent = nameInput.value
-  profileJob.textContent = jobInput.value
-  closePopupEdit()
 }
 
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
-editFormElement.addEventListener('submit', formSubmitHandler)
+formElement.addEventListener('submit', formSubmitHandler)
 
+// toggling cards
 
-<!-- Карточки + кнопка добавления и закрытия, модальное окно на добавление и на просмотр -->
+const cardsIntroElement = document.querySelector('.cards-intro')
+const cardIntroElement = cardsIntroElement.querySelectorAll('.card')
+const buttonIntroElement = cardsIntroElement.querySelectorAll('.radio-button')
 
-// модальное окно с просмотром картинки
-const popupImage = document.querySelector('.popup_image')
-const popupPhoto = popupImage.querySelector('.popup__photo')
-const popupTitle = popupImage.querySelector('.popup__sightseeing')
-const closeImageButton = popupImage.querySelector('.popup__close-button')
-const openPopupImage = () => popupImage.classList.add('popup_opened')
-const closePopupImage = () => popupImage.classList.remove('popup_opened')
-closeImageButton.addEventListener('click', () => closePopupImage())
+const kalyakaElement = document.querySelector('.kalyaka-action')
+const mockupElement = kalyakaElement.querySelectorAll('.mockups__image')
+const buttonKalyakaElement = kalyakaElement.querySelectorAll('.radio-button')
 
+const cardsNextElement = document.querySelector('.cards-next')
+const cardNextElement = cardsNextElement.querySelectorAll('.card')
+const buttonNextElement = cardsNextElement.querySelectorAll('.radio-button')
 
-// функция создания карточки
-function addCard(name, link) {
-  const cardTemplate = document.querySelector('#card-template').content // находим темплейт с карточками
-  const cardElement = cardTemplate.querySelector('.card').cloneNode(true) // клонируем его
-
-  const imageElement = cardElement.querySelector('.card__photo') // находим элемент картинки
-  const titleElement = cardElement.querySelector('.card__sightseeing') // находим элемент названия
-
-  // связываем аргументы функции addCard с атрибутами картинки
-  imageElement.src = link
-  imageElement.alt = name
-  titleElement.textContent = name
-
-  // устанавливаем слушатель события на картинку, открываем ее в попапе
-  imageElement.addEventListener('click', function() {
-    popupPhoto.src = link
-    popupTitle.textContent = name
-    openPopupImage()
+function clickCard(card) {
+  card.forEach((element) => {
+    element.classList.toggle('card_hidden')
   });
+};
 
-  const likeButton = cardElement.querySelector('.card__heart-button') //находим кнопку лайка
-  const trashButton = cardElement.querySelector('.card__trash-button') //находим кнопку удаления
+Array.from(buttonIntroElement).forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    const activeButton = cardsIntroElement.querySelector('.radio-button_active')
+    activeButton.classList.remove('radio-button_active')
+    evt.target.classList.add('radio-button_active')
+    clickCard(cardIntroElement)
+  });
+});
 
-  likeButton.addEventListener('click', () => likeButton.classList.toggle('card__heart-button_active'))
-  // устанавливаем слушатель события на кнопку лайка
+Array.from(buttonKalyakaElement).forEach((item, index) => {
+  item.addEventListener('click', (evt) => {
+    const activeButton = kalyakaElement.querySelector('.radio-button_active');
+    activeButton.classList.remove('radio-button_active');
+    evt.target.classList.add('radio-button_active');
+    mockupElement.forEach((element, i) => {
+      if (index === i) {
+        element.classList.remove('mockups__image_hidden');
+      } else {
+        element.classList.add('mockups__image_hidden');
+      }
+    });
+  });
+});
 
-  trashButton.addEventListener('click', () => cardElement.remove())
-  // устанавливаем слушатель события на кнопку удаления
+Array.from(buttonNextElement).forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    const activeButton = cardsNextElement.querySelector('.radio-button_active')
+    activeButton.classList.remove('radio-button_active')
+    evt.target.classList.add('radio-button_active')
+    clickCard(cardNextElement)
+  });
+});
 
-  return cardElement //возвращаем готовую карточку
-}
-
-const cardsList = document.querySelector('.cards__list') // находим список для добавления карточек
-
-// проходим по каждой карточке "из коробки" и добавляем в функцию "создания", помещаем в начало списка
-initialCards.forEach((item) => cardsList.prepend(addCard(item.name, item.link)))
-
-
-// ДОБАВЛЕНИЕ КАРТОЧКИ ЧЕРЕЗ МОДАЛЬНОЕ ОКНО
-
-const popupAdd = document.querySelector('.popup_add-card')
-const addButton = profile.querySelector('.profile__add-button')
-const closeAddButton = popupAdd.querySelector('.popup__close-button')
-const openPopupAdd = () => popupAdd.classList.add('popup_opened')
-const closePopupAdd = () => popupAdd.classList.remove('popup_opened')
-addButton.addEventListener('click', () => openPopupAdd())
-closeAddButton.addEventListener('click', () => closePopupAdd())
-
-const addFormElement = document.querySelector('.edit-form_card')
-const cardNameInput = addFormElement.querySelector('.edit-form__input_card-name')
-const cardLinkInput = addFormElement.querySelector('.edit-form__input_card-link')
-
-// Обработчик «отправки» формы, введенные данные прогоняются через функцию "создания" и "добавления", модальное окно закрывается, поля очищаются
-function addFormSubmitHandler(evt) {
-  evt.preventDefault()
-
-  cardsList.prepend(addCard(cardNameInput.value, cardLinkInput.value))
-  closePopupAdd()
-  addFormElement.reset()
-}
-
-// Прикрепляем обработчик к форме
-addFormElement.addEventListener('submit', addFormSubmitHandler)
 
 
 

@@ -2,6 +2,6 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  @include reset;
 }
